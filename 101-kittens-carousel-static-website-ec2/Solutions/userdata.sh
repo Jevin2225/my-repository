@@ -1,5 +1,10 @@
 #! /bin/bash
-dnf update -y
+yum update -y
+yum install httpd -y
+
+
+
+
 dnf install httpd -y
 FOLDER="https://raw.githubusercontent.com/awsdevopsteam/101-cfn-static-website-ec2/master/static-web"
 cd /var/www/html
