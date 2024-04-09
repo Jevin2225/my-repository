@@ -28,7 +28,8 @@ Parameters:
   pHomeDirectory:
     Description: Github home directory 
     Type: String
-    Default: https://https://raw.githubusercontent.com/Jevin2225/my-repository/main/001-roman-numerals-converter"
+    Default: https://raw.githubusercontent.com/Jevin2225/my-repository/main/001-roman-numerals-converter
+
   
 Resources:
 
@@ -60,7 +61,7 @@ Resources:
         - !Ref rSecurityGroup
       Tags: 
         - Key: Name
-          Value: altaz-roman-numeral-web-server
+          Value: Jevin-roman-numeral-web-server
       UserData:
         Fn::Base64:
           !Sub |
@@ -90,9 +91,6 @@ Outputs:
   WebURL:
     Description: Full Web URL
     Value: !Join [ "", [ "http://",  !GetAtt rWebServer.PublicDnsName ] ]
-
-
-
 
 
 
